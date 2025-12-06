@@ -35,7 +35,7 @@ export default function ProductDetails(){
     e.preventDefault()
     if(!validate()) return
     try{
-      await axios.post('/api/enquiries', { product_id: Number(id), ...form })
+      await axios.post('https://gvcc-assignment-ez0b.onrender.com/api/enquiries', { product_id: Number(id), ...form })
       alert('Enquiry submitted — thank you!')
       setForm({ name:'', email:'', phone:'', message:'' })
     }catch(err){
