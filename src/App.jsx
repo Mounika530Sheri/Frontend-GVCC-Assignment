@@ -17,7 +17,7 @@ export default function App(){
   async function fetchProducts(){
     const params = { search, category, page, limit }
     try{
-      const res = await axios.get('/api/products', { params })
+      const res = await axios.get('https://gvcc-assignment-ez0b.onrender.com/api/products', { params })
       setProducts(res.data.products || [])
       setTotal(res.data.total || 0)
     }catch(e){
