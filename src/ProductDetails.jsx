@@ -13,7 +13,7 @@ export default function ProductDetails(){
 
   async function fetchProduct(){
     try{
-      const res = await axios.get(`/api/products/${id}`)
+      const res = await axios.get(`https://gvcc-assignment-ez0b.onrender.com/api/products/${id}`)
       setProduct(res.data)
     }catch(e){
       console.error(e)
